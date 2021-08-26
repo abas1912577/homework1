@@ -76,9 +76,6 @@ public class Main {
         int num = 256;
         int result = num / 10 % 10;
         System.out.println(result);
-
-
-
     }
 
     private static void task1() {

@@ -1,4 +1,4 @@
-package pro.sky.java.course1;
+package pro.sky.java.course1.lesson1;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Main {
         byte x = -128;
         short y = 15000;
         int z = 5555555;
-        long k = 1234567890;
+        long k = 1234567890L;
         float l = 3.5f;
         double m = 75.3;
         char n = 47;
@@ -26,20 +26,26 @@ public class Main {
         int milkWeight = 105;
         int iceCreamWeight = 100;
         int eggWeight = 70;
-        int breakFastWeight = bananaWeight * 5 + milkWeight * 2 + iceCreamWeight * 2 + eggWeight * 4;
+        int bananaAmount = 5;
+        int milkAmount = 2;
+        int iceCreamAmount = 2;
+        int eggsAmount = 4;
+        float kg = 1000f;
+        int breakFastWeight = bananaWeight * bananaAmount + milkWeight * milkAmount + iceCreamWeight * iceCreamAmount + eggWeight * eggsAmount;
         System.out.println("Вес спорт-завтрака составляет " + breakFastWeight + " грамм");
-        float kgWeight = breakFastWeight / 1000f;
+        float kgWeight = breakFastWeight / kg;
         System.out.println("Вес спорт-завтрака в килограммах " + kgWeight + " кг");
 
         //Задание4
         int loseWeightKg = 7;
-        int loseWeightG = loseWeightKg * 1000;
+        float g = 1000f;
+        int loseWeightG = (int) (loseWeightKg * g);
         int losingWeight1 = 250;
         int losingWeight2 = 500;
         int daysLoseWeight1 = loseWeightG / losingWeight1;
         int daysLoseWeight2 = loseWeightG / losingWeight2;
-        System.out.println("Кол-во дней при сбрасывании в день 250 г " + daysLoseWeight1 + " дней" );
-        System.out.println("Кол-во дней при сбрасывании в день 500 г " + daysLoseWeight2 + " дней" );
+        System.out.println("Кол-во дней при сбрасывании в день 250 г " + daysLoseWeight1 + " дней");
+        System.out.println("Кол-во дней при сбрасывании в день 500 г " + daysLoseWeight2 + " дней");
         int middleDays = (daysLoseWeight1 + daysLoseWeight2) / 2;
         System.out.println("В среднем для сброса 7 кг может потребоваться " + middleDays + " дней");
 
@@ -49,19 +55,19 @@ public class Main {
         int kristinaSalary = 76230;
         int months = 12;
         float percent = 10f;
-        percent = (10 + 100f) / 100f;
+        percent = (percent + 100f) / 100f;
         int mashaSalaryIncrease = (int) (mashaSalary * percent);
         int denisSalaryIncrease = (int) (denisSalary * percent);
         int kristinaSalaryIncrease = (int) (kristinaSalary * percent);
         int mashaSalaryDif = (mashaSalaryIncrease - mashaSalary) * months;
         int denisSalaryDif = (denisSalaryIncrease - denisSalary) * months;
         int kristinaSalaryDif = (kristinaSalaryIncrease - kristinaSalary) * months;
-        System.out.println("Маша теперь получает " + mashaSalaryIncrease + " рублей." + " Её доход вырос на " + mashaSalaryDif + " рублей");
-        System.out.println("Денис теперь получает " + denisSalaryIncrease + " рублей." + " Его доход вырос на " + denisSalaryDif + " рублей");
-        System.out.println("Кристина теперь получает " + kristinaSalaryIncrease + " рублей." + " Её доход вырос на " + kristinaSalaryDif + " рублей");
+        System.out.println("Маша теперь получает " + mashaSalaryIncrease + " рублей." + " Её годовой доход вырос на " + mashaSalaryDif + " рублей");
+        System.out.println("Денис теперь получает " + denisSalaryIncrease + " рублей." + " Его годовой доход вырос на " + denisSalaryDif + " рублей");
+        System.out.println("Кристина теперь получает " + kristinaSalaryIncrease + " рублей." + " Её годовой доход вырос на " + kristinaSalaryDif + " рублей");
 
         //Задание6
-        task1();
+        task6();
 
         //Задание7
         int a = 5;
@@ -78,7 +84,7 @@ public class Main {
         System.out.println(result);
     }
 
-    private static void task1() {
+    private static void task6() {
         int a = 12;
         int b = 27;
         int c = 44;

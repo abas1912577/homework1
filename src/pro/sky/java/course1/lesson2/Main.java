@@ -16,35 +16,37 @@ public class Main {
         if (clientOS1 == 1) {
             if (clientDeviceYear <= 2019) {
                 System.out.println("Установите lite-версию приложения для Android по ссылке ");
-            } else System.out.println("Установите обычную версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Установите обычную версию приложения для Android по ссылке");
+            }
         } else {
             if (clientDeviceYear <= 2019) {
                 System.out.println("Установите lite-версию приложения для IOS по ссылке ");
-            } else System.out.println("Установите обычную версию приложения для IOS по ссылке ");
+            } else {
+                System.out.println("Установите обычную версию приложения для IOS по ссылке ");
+            }
         }
 
         //Задание 3
         int year = 2008;
-        if (year % 4 != 0) {
-            System.out.println("Год не является високосным");
-        } else if (year % 100 == 0 && year % 400 != 0) {
+        if (year % 4 != 0 || year % 100 == 0 && year % 400 != 0) {
             System.out.println("Год не является високосным");
         } else {
             System.out.println("Год является високосным");
         }
 
         //Задание 4
-        int deliveryDistance = 95;
+        int deliveryDistance = 61;
         int deliveryTime = 1;
         if (deliveryDistance <= 20) {
-            System.out.println("срок доставки - " + deliveryTime + " дней");
-        } else if (deliveryDistance <= 60) {
-            deliveryTime += 1;
-            System.out.println("срок доставки - " + deliveryTime + " дней");
-        } else if (deliveryDistance <= 100) {
-            deliveryTime += 2;
-            System.out.println("срок доставки - " + deliveryTime + " дней");
         }
+        if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            deliveryTime += 1;
+        }
+        if (deliveryDistance > 60) {
+            deliveryTime += 2;
+        }
+        System.out.println("Срок доставки - " + deliveryTime + " дней");
 
         //Задание 5
         int monthNumber = 12;
@@ -74,20 +76,21 @@ public class Main {
         }
 
         //Задание 6
-        int age = 24;
-        int salary = 51_000;
-        if (age >= 23) {
-            if (salary > 80_000) {
-                salary *= 3;
-                salary *= 1.5;
-                System.out.println(salary);
-            } else if (salary > 50_000) {
-                salary *= 1.2;
-                System.out.println(salary);
-            }
-        } else {
-            salary *= 2;
-            System.out.println(salary);
+        int age = 19;
+        int salary = 58_000;
+        double limit = salary;
+        if (age < 23) {
+            limit *= 2;
         }
+        if (age >= 23) {
+            limit *= 3;
+        }
+        if (salary > 50_000 && salary < 80_000) {
+            limit *= 1.2;
+        }
+        if (salary > 80_000) {
+            limit *= 1.5;
+        }
+        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + limit + " рублей.");
     }
 }

@@ -81,15 +81,15 @@ public class Main {
         double limit = salary;
         if (age < 23) {
             limit *= 2;
-        }
-        if (age >= 23) {
+        } else {
             limit *= 3;
-        }
-        if (salary > 50_000 && salary < 80_000) {
-            limit *= 1.2;
         }
         if (salary > 80_000) {
             limit *= 1.5;
+        } else {
+            if (salary > 50_000) {
+                limit *= 1.2;
+            }
         }
         System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + limit + " рублей.");
     }

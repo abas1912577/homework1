@@ -10,9 +10,7 @@ public class Main {
     }
 
     private static void task4() {
-        int min = 1;
-        int max = 30;
-        for (; min <= max; min++) {
+        for (int min = 1; min <= 30; min++) {
             System.out.print(min + ": ");
             if (min % 3 == 0) {
                 System.out.print("ping" + " ");
@@ -42,9 +40,8 @@ public class Main {
         int daysMonth = 31;
         int daysWeek = 7;
         int firstFriday = 1;
-        int friday = firstFriday;
         System.out.println();
-        for (; friday <= daysMonth; friday = friday + daysWeek) {
+        for (int friday = firstFriday; friday <= daysMonth; friday += daysWeek) {
             System.out.println("Сегодня пятница " + friday + "-ое число. Необходимо подготовить отчет.");
         }
     }

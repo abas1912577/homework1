@@ -7,12 +7,14 @@ public class Main {
         int[] arr = generateRandomArray();
         System.out.println(Arrays.toString(arr));
 
+        //Задание1
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
         System.out.println("Сумма затрат за месяц составил " + sum + " рублей.");
 
+        //Задание2
         int maxCost = 0;
         int minCost = 200000;
         for (int a = 0; a != arr.length; a++) {
@@ -25,9 +27,11 @@ public class Main {
         }
         System.out.println("Максимальная сумма затрат за месяц составила " + maxCost + " рублей. Минимальная сумма затрат за месяц составила " + minCost + " рублей.");
 
+        //Задание3
         double midCost = sum / arr.length;
         System.out.println("Средняя сумма трат за месяц составила " + midCost + " рублей.");
 
+        //Задание4
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         System.out.println(reverseFullName);
         for (int i = 0; i < reverseFullName.length / 2; i++) {
@@ -37,6 +41,7 @@ public class Main {
             System.out.println(b);
         }
 
+        //Задание5
         int[][] gameField = new int[3][3];
         for (int i = 0; i < gameField.length; i++) {
             for (int j = 0; j < gameField.length; j++) {

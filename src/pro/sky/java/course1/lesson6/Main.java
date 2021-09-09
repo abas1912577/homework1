@@ -26,9 +26,8 @@ public class Main {
         String fullName = "Ivanov Ivan Ivanovich";
         int a = fullName.indexOf(' ') + 1;
         int b = fullName.lastIndexOf(' ') + 1;
-        int c = fullName.length();
         String firstName = fullName.substring(a, b);
-        String middleName = fullName.substring(b, c);
+        String middleName = fullName.substring(b);
         String lastName = fullName.substring(0, a);
         System.out.println("Имя сотрудника - " + firstName);
         System.out.println("Фамилия сотрудника - " + lastName);
